@@ -36,5 +36,9 @@ public class BaseSteps {
                 text(userName));
     }
 
+    @Step("Нажимаем кнопку \"Выйти\"")
+    public void clickLogout() {
+        $("#logout").click();
+    }
 }
 
