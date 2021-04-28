@@ -7,7 +7,7 @@ import steps.BaseSteps;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class AuthorizationTests {
+public class AuthorizationTests extends TestBase {
     public BaseSteps steps = new BaseSteps();
 
     @Test
