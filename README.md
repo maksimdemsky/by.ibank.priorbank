@@ -18,3 +18,14 @@
 - Jenkins
 - Selenoid
 - Telegram Bot
+
+### Allure report
+![Allure](src/test/resources/img/icons/allure.file/1.png)
+![Allure](src/test/resources/img/icons/allure.file/2.png)
+![Allure](src/test/resources/img/icons/allure.file/3.png)
+
+### Video
+![Video](src/test/resources/img/icons/allure.file/4.gif)
+
+### Telegram notifications
+![Telegram](src/test/resources/img/icons/allure.file/5.jpg)
