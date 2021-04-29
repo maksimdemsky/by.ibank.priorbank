@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.AttachmentHelper.*;
@@ -46,5 +47,26 @@ public class BaseSteps {
     public void clickLogout() {
         $("#logout").click();
     }
+
+    @Step("Нажать на вкладку \"Платежи и другие операции\"")
+    public void clickPaymentAndOtherOperationsTab() {
+        $("#menu-content").$(byText("Платежи и другие операции")).click();
+    }
+
+    @Step("Нажать на вкладку \"Платежи\"")
+    public void clickPaymentsTab() {
+        $("#menu-content").$(byText("Платежи")).click();
+    }
+
+    @Step("Нажать на вкладку \"Платежи в белорусских рублях\"")
+    public void clickPaymentsInBelCurrencyTab() {
+        $("#menu-content").$(byText("Платежи в белорусских рублях")).click();
+    }
+
+    @Step("Нажать на вкладку \"9 - Рублевая платежка\"")
+    public void clickRublePaymentsTab() {
+        $("#menu-content").$(byText("9 - Рублевая платежка")).click();
+    }
 }
+
 
