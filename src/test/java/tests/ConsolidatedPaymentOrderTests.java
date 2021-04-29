@@ -3,38 +3,35 @@ package tests;
 import org.junit.jupiter.api.Test;
 import steps.BaseSteps;
 
-public class RublePaymentTests extends TestBase {
+public class ConsolidatedPaymentOrderTests extends TestBase {
     public BaseSteps steps = new BaseSteps();
 
     @Test
-    void openRublePayments() {
+    void openConsolidatedPaymentOrder() {
         steps.openMainPage();
         steps.insertTestData();
         steps.clickSubmit();
         steps.clickPaymentAndOtherOperationsTab();
         steps.clickPaymentsTab();
         steps.clickPaymentsInBelCurrencyTab();
-        steps.clickRublePaymentsTab();
-        steps.checkHeaderInRublePayment();
+        steps.clickConsolidatedPaymentOrderTab();
+        steps.checkHeaderInConsolidatedPaymentOrder();
     }
 
     @Test
-    void createRublePayments() {
+    void createConsolidatedPaymentOrder() {
         steps.openMainPage();
         steps.insertTestData();
         steps.clickSubmit();
         steps.clickPaymentAndOtherOperationsTab();
         steps.clickPaymentsTab();
         steps.clickPaymentsInBelCurrencyTab();
-        steps.clickRublePaymentsTab();
+        steps.clickConsolidatedPaymentOrderTab();
         steps.clickNewPaymentButton();
-        steps.insertAmount();
-        steps.insertRecipientName();
-        steps.insertIBAN();
-        steps.insertBankName();
-        steps.insertUnp();
-        steps.insertCbu();
-        steps.insertAccountNumber();
-        steps.savePayment();
     }
+
 }
+
+
+
+   // sleep(2000);

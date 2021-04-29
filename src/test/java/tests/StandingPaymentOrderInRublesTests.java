@@ -3,38 +3,32 @@ package tests;
 import org.junit.jupiter.api.Test;
 import steps.BaseSteps;
 
-public class RublePaymentTests extends TestBase {
+import static com.codeborne.selenide.Selenide.sleep;
+
+public class StandingPaymentOrderInRublesTests extends TestBase {
     public BaseSteps steps = new BaseSteps();
 
     @Test
-    void openRublePayments() {
+    void openStandingPaymentOrderInRubles() {
         steps.openMainPage();
         steps.insertTestData();
         steps.clickSubmit();
         steps.clickPaymentAndOtherOperationsTab();
         steps.clickPaymentsTab();
         steps.clickPaymentsInBelCurrencyTab();
-        steps.clickRublePaymentsTab();
-        steps.checkHeaderInRublePayment();
+        steps.clickStandingPaymentOrderInRublesTab();
+        steps.checkHeaderInStandingPaymentOrderInRubles();
     }
 
     @Test
-    void createRublePayments() {
+    void createStandingPaymentOrderInRubles() {
         steps.openMainPage();
         steps.insertTestData();
         steps.clickSubmit();
         steps.clickPaymentAndOtherOperationsTab();
         steps.clickPaymentsTab();
         steps.clickPaymentsInBelCurrencyTab();
-        steps.clickRublePaymentsTab();
+        steps.clickStandingPaymentOrderInRublesTab();
         steps.clickNewPaymentButton();
-        steps.insertAmount();
-        steps.insertRecipientName();
-        steps.insertIBAN();
-        steps.insertBankName();
-        steps.insertUnp();
-        steps.insertCbu();
-        steps.insertAccountNumber();
-        steps.savePayment();
     }
 }
