@@ -20,7 +20,7 @@ public class BaseSteps {
             clientName = "ООО \"ФИРМА\"",
             clientUnp = "УНП 111111116",
             userName = "Иванов Иван Иванович",
-            sumForRublPayment = "1000",
+            sumForRubPayment = "1000",
             RecipientName = "ООО Автотест для Prior",
             iban = "08 PJCB 3012 0000 3610 0000 0933";
 
@@ -106,7 +106,7 @@ public class BaseSteps {
     @Step("Ввод в поле сумма")
     public void insertAmount() {
         $(".k-formatted-value.text-right.k-input").click();
-        $("[name=Amount]").setValue(sumForRublPayment);
+        $("[name=Amount]").setValue(sumForRubPayment);
     }
 
     @Step("Ввод в IBAN в поле БЕНЕЦИФАР>")

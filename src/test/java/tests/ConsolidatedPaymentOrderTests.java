@@ -31,7 +31,3 @@ public class ConsolidatedPaymentOrderTests extends TestBase {
     }
 
 }
-
-
-
-   // sleep(2000);
