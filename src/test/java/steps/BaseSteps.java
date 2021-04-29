@@ -1,5 +1,6 @@
 package steps;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -136,7 +137,6 @@ public class BaseSteps {
     @Step("Выбор счёта плательщика")
     public void insertAccountNumber() {
         $$("[type=button]").get(13).click();
-        $("#dictionaries").shouldHave(text("Счет BY17PJCB34711000002170000933 в 933")).click();
         $$("[role=row]").get(3).click();
         $("#btnDictionarySave").click();
     }
@@ -144,5 +144,15 @@ public class BaseSteps {
     @Step("Сохранение платежа")
     public void savePayment() {
         $("#btnSave").click();
+    }
+
+    @Step("Открытие страницы сообщений через шапку сайта")
+    public void openMessageInHeader() {
+        $(".messages.pull-right").click();
+    }
+
+    @Step("Проверка колличество сообщений в списке")
+    public void checkEqualMessage() {
+       $$(".k-master-row").shouldHave(CollectionCondition.sizeGreaterThanOrEqual(3));
     }
 }
